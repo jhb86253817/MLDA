@@ -815,81 +815,81 @@ int model::save_model_twords(string filename, int language) {
 model::~model() {
     if (phi) {
         for (int n = 0; n < ptrndata->N_max; n++) {
-            delete phi[n];
+            delete[] phi[n];
         }
     }
     if (phi2) {
         for (int n2 = 0; n2 < ptrndata2->N_max; n2++) {
-            delete phi2[n2];
+            delete[] phi2[n2];
         }
     }
 
     if (gamma) {
         for (int m = 0; m < M; m++) {
-            delete gamma[m];
+            delete[] gamma[m];
         }
     }
 
     if (dig_gamma) {
         for (int m = 0; m < M; m++) {
-            delete dig_gamma[m];
+            delete[] dig_gamma[m];
         }
     }
 
     if (gamma_sum) {
-        delete gamma_sum;
+        delete[] gamma_sum;
     }
 
     if (lambda) {
         for (int k = 0; k < K; k++) {
-            delete lambda[k];
+            delete[] lambda[k];
         }
     }
     if (lambda2) {
         for (int k2 = 0; k2 < K; k2++) {
-            delete lambda2[k2];
+            delete[] lambda2[k2];
         }
     }
 
     if (dig_lambda) {
         for (int k = 0; k < K; k++) {
-            delete dig_lambda[k];
+            delete[] dig_lambda[k];
         }
     }
     if (dig_lambda2) {
         for (int k2 = 0; k2 < K; k2++) {
-            delete dig_lambda2[k2];
+            delete[] dig_lambda2[k2];
         }
     }
 
     if (lambda_sum) {
-        delete lambda_sum;
+        delete[] lambda_sum;
     }
     if (lambda_sum2) {
-        delete lambda_sum2;
+        delete[] lambda_sum2;
     }
 
     if (dig_lambda_sum) {
-        delete dig_lambda_sum;
+        delete[] dig_lambda_sum;
     }
     if (dig_lambda_sum2) {
-        delete dig_lambda_sum2;
+        delete[] dig_lambda_sum2;
     }
 
     if (theta) {
         for (int m = 0; m < M; m++) {
-            delete theta[m];
+            delete[] theta[m];
         }
     }
 
     if (beta) {
         for (int k = 0; k < K; k++) {
-            delete beta[k];
+            delete[] beta[k];
         }
     }
     if (beta2) {
         for (int k2 = 0; k2 < K; k2++) {
-            delete beta2[k2];
+            delete[] beta2[k2];
         }
     }
 }

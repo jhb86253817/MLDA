@@ -1254,10 +1254,10 @@ int model::save_inf_model_others(string filename) {
 
 model::~model() {
     if (p) {
-	    delete p;
+	    delete[] p;
     }
     if (p2) {
-	    delete p2;
+	    delete[] p2;
     }
 
     if (ptrndata) {
@@ -1274,14 +1274,14 @@ model::~model() {
     if (z) {
 	    for (int m = 0; m < M; m++) {
 	        if (z[m]) {
-	    	    delete z[m];
+	    	    delete[] z[m];
 	        }
 	    }
     }
     if (z2) {
 	    for (int m = 0; m < M2; m++) {
 	        if (z2[m]) {
-	    	    delete z2[m];
+	    	    delete[] z2[m];
 	        }
 	    }
     }
@@ -1289,14 +1289,14 @@ model::~model() {
     if (nw) {
 	    for (int w = 0; w < V; w++) {
 	        if (nw[w]) {
-	    	    delete nw[w];
+	    	    delete[] nw[w];
 	        }
 	    }
     }
     if (nw2) {
 	    for (int w = 0; w < V2; w++) {
 	        if (nw2[w]) {
-	    	    delete nw2[w];
+	    	    delete[] nw2[w];
 	        }
 	    }
     }
@@ -1304,43 +1304,43 @@ model::~model() {
     if (nd) {
 	    for (int m = 0; m < M; m++) {
 	        if (nd[m]) {
-	    	    delete nd[m];
+	    	    delete[] nd[m];
 	        }
 	    }
     } 
     if (nd2) {
 	    for (int m = 0; m < M2; m++) {
 	        if (nd2[m]) {
-	    	    delete nd2[m];
+	    	    delete[] nd2[m];
 	        }
 	    }
     } 
     
     if (nwsum) {
-	    delete nwsum;
+	    delete[] nwsum;
     }   
     if (nwsum2) {
-	    delete nwsum2;
+	    delete[] nwsum2;
     }   
     
     if (ndsum) {
-	    delete ndsum;
+	    delete[] ndsum;
     }
     if (ndsum2) {
-	    delete ndsum2;
+	    delete[] ndsum2;
     }
     
     if (theta) {
 	    for (int m = 0; m < M; m++) {
 	        if (theta[m]) {
-	    	    delete theta[m];
+	    	    delete[] theta[m];
 	        }
 	    }
     }
     if (theta2) {
 	    for (int m = 0; m < M2; m++) {
 	        if (theta2[m]) {
-	    	    delete theta2[m];
+	    	    delete[] theta2[m];
 	        }
 	    }
     }
@@ -1348,14 +1348,14 @@ model::~model() {
     if (phi) {
 	    for (int k = 0; k < K; k++) {
 	        if (phi[k]) {
-	    	    delete phi[k];
+	    	    delete[] phi[k];
 	        }
 	    }
     }
     if (phi2) {
 	    for (int k = 0; k < K; k++) {
 	        if (phi2[k]) {
-	    	    delete phi2[k];
+	    	    delete[] phi2[k];
 	        }
 	    }
     }
@@ -1364,7 +1364,7 @@ model::~model() {
     if (newz) {
 	    for (int m = 0; m < newM; m++) {
 	        if (newz[m]) {
-	    	    delete newz[m];
+	    	    delete[] newz[m];
 	        }
 	    }
     }
@@ -1372,7 +1372,7 @@ model::~model() {
     if (newnw) {
 	    for (int w = 0; w < newV; w++) {
 	        if (newnw[w]) {
-	    	    delete newnw[w];
+	    	    delete[] newnw[w];
 	        }
 	    }
     }
@@ -1380,25 +1380,25 @@ model::~model() {
     if (newnd) {
 	    for (int m = 0; m < newM; m++) {
 	        if (newnd[m]) {
-	    	    delete newnd[m];
+	    	    delete[] newnd[m];
 	        }
 	    }
     } 
     
     if (newnwsum) {
-	    delete newnwsum;
+	    delete[] newnwsum;
     }   
     
     if (newtheta) {
 	    for (int m = 0; m < newM; m++) {
 	        if (newtheta[m]) {
-	    	    delete newtheta[m];
+	    	    delete[] newtheta[m];
 	        }
 	    }
     }
 
     if (top_topic_lang1) {
-        delete top_topic_lang1;
+        delete[] top_topic_lang1;
     }
 }
 
