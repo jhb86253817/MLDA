@@ -11,5 +11,5 @@ Programming languages:
 * c++, for main algorithms
 
 Extra tools required:
-* Stanford segmenter
-* opencc
+* Stanford segmenter, for Chinese phrase segmentation
+* opencc, for traditional-to-simplified Chinese transformation
